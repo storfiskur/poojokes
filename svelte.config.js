@@ -6,5 +6,9 @@ export default {
 			fallback: '200.html'
 		}),
 		prerender: { entries: [] }
+	},
+	root: 'src',
+	build: {
+		outDir: '../dist'
 	}
 };
