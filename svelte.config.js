@@ -1,22 +1,10 @@
-// @ts-nocheck
 import adapter from '@sveltejs/adapter-static';
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
+export default {
 	kit: {
 		adapter: adapter({
-			// default options are shown. On some platforms
-			// these options are set automatically — see below
-			pages: 'build',
-			assets: 'build',
-			fallback: null,
-			precompress: false
+			fallback: '200.html'
 		}),
-		prerender: {
-			// Default option shown. This can be [] if you are using SPA mode.
-			entries: ['*']
-		}
+		prerender: { entries: [] }
 	}
 };
-
-export default config;
